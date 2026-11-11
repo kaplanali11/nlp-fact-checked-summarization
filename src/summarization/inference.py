@@ -6,7 +6,7 @@ import torch
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 class TurkishT5Summarizer:
-    def __init__(self, model_name="dbmdz/turkish-t5-summarization", device=None):
+    def __init__(self, model_name="ozcangundes/mt5-small-turkish-summarization", device=None):
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
         print(f"[K3] Model yukleniyor: {model_name} ({self.device})")
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
